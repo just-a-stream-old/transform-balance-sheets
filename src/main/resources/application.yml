@@ -13,13 +13,13 @@ spring:
     stream:
       bindings:
         # Input(s)
-        generateExchangeDataModel-in-0:
+        generateBalanceSheetDataModel-in-0:
           destination: ${GENERATE_BALANCE_SHEET_DATA_MODEL_INPUT_0:fmp.nonprod.financial.balance_sheet.ingestion.v1}
 
       kafka.streams:
         header.traceId: x-trace-id
         bindings:
-          generateExchangeDataModel-in-0:
+          generateBalanceSheetDataModel-in-0:
             dlqName: ${GENERATE_BALANCE_SHEET_DATA_MODEL_DLQ_TOPIC_0}
 
         binder:
