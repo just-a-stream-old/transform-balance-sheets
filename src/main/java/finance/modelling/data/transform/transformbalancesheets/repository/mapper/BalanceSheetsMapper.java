@@ -14,6 +14,7 @@ public interface BalanceSheetsMapper {
 
     BalanceSheets balanceSheetsDTOToBalanceSheets(FmpBalanceSheetsDTO fmpBalanceSheetsDTO);
 
+    @Mapping(source = "acceptedDate", target = "date")
     @Mapping(source = "othertotalStockholdersEquity", target = "otherTotalStockholdersEquity")
     BalanceSheet balanceSheetDTOToBalanceSheet(FmpBalanceSheetDTO fmpBalanceSheetDTO);
 }
